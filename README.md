@@ -1,2 +1,3 @@
-# grafana-kubernetes-pulumi-module
-Pulumi Module to Deploy "Grafana on Kubernetes" w/ Planton Cloud
+# Deploy Grafana on Kubernetes
+
+This is a Planton Cloud Pulumi Module to deploy Grafana on Kubernetes.
