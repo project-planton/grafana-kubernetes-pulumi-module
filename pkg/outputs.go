@@ -1,7 +1,7 @@
 package pkg
 
 import (
-	"github.com/plantoncloud/planton-cloud-apis/zzgo/cloud/planton/apis/code2cloud/v1/kubernetes/grafanakubernetes/model"
+	"github.com/plantoncloud/planton-cloud-apis/zzgo/cloud/planton/apis/code2cloud/v1/kubernetes/grafanakubernetes"
 	"github.com/plantoncloud/stack-job-runner-golang-sdk/pkg/automationapi/autoapistackoutput"
 	"github.com/pulumi/pulumi/sdk/v3/go/auto"
 )
@@ -14,8 +14,8 @@ const (
 )
 
 func PulumiOutputToStackOutputsConverter(pulumiOutputs auto.OutputMap,
-	input *model.GrafanaKubernetesStackInput) *model.GrafanaKubernetesStackOutputs {
-	return &model.GrafanaKubernetesStackOutputs{
+	input *grafanakubernetes.GrafanaKubernetesStackInput) *grafanakubernetes.GrafanaKubernetesStackOutputs {
+	return &grafanakubernetes.GrafanaKubernetesStackOutputs{
 		Namespace:          autoapistackoutput.GetVal(pulumiOutputs, NamespaceOutputName),
 		Service:            autoapistackoutput.GetVal(pulumiOutputs, ServiceOutputName),
 		PortForwardCommand: autoapistackoutput.GetVal(pulumiOutputs, PortForwardCommandOutputName),
